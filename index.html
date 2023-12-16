@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="images">
+        <img
+          src="images/bg-main-desktop.png"
+          alt="background"
+          id="background"
+        />
+        <img src="images/bg-card-back.png" alt="card" id="card-back" />
+        <div id="card-front">
+          <img src="images/card-logo.svg" alt="" class="card-logo" />
+          <div class="card-data">
+            <p id="card-number">0000&nbsp;0000&nbsp;0000&nbsp;0000</p>
+            <div class="details">
+              <p id="owner-name">JANE APPLESEED</p>
+              <p id="expiry-date">00/00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form">
+        <div class="cardholder-name flex-box-column">
+          <label for="name">Cardholder Name</label>
+          <input
+            type="text"
+            id="ownweNameInput"
+            placeholder=" e.g. Jane Appleseed"
+          />
+        </div>
+        <div class="cardholder-name flex-box-column">
+          <label for="name">Card Number</label>
+          <input
+            id="cardNumber"
+            type="text"
+            placeholder="  e.g. 1234 5678 9123 0000"
+            maxlength="19"
+          />
+          <p
+            id="errorMessageCardNumber"
+            style="font-size: 55%; margin-top: 3px; color: red"
+          >
+            Card number cannot be blank
+          </p>
+        </div>
+
+        <div class="card-details">
+          <div class="expiryDate flex-box-column">
+            <label for="date">Exp. Date (MM/YY)</label>
+            <div class="inputs">
+              <input
+                type="text"
+                id="month"
+                placeholder="MM"
+                style="width: 30%"
+                maxlength="2"
+              />
+              <input
+                type="text"
+                id="year"
+                placeholder="YY"
+                style="width: 30%"
+                min="2000"
+                max="2050"
+                maxlength="2"
+              />
+            </div>
+            <p
+              id="errorMessageDate"
+              style="font-size: 55%; margin-top: 3px; color: red"
+            >
+              Can't be blank
+            </p>
+            <p
+              id="MonthError"
+              style="font-size: 55%; margin-top: 3px; color: red"
+            >
+              Month entered is incorrect
+            </p>
+          </div>
+          <div class="CVV flex-box-column">
+            <label for="cvv">CVC</label>
+            <input
+              type="text"
+              maxlength="3"
+              id="cvv"
+              placeholder=" e.g. 123"
+              style="width: 35%"
+            />
+            <p
+              id="errorMessageCVV"
+              style="font-size: 55%; margin-top: 3px; color: red"
+            >
+              Can't be blank
+            </p>
+          </div>
+        </div>
+        <button id="confirm">Confirm</button>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://github.com/ankitx007" target="_blank">Ankit Sharma</a
+          >.
+        </div>
+      </div>
+      <div class="confirmation">
+        <img src="images/icon-complete.svg" alt="" />
+        <p style="text-align: center">THANK YOU!</p>
+        <p>We've added your card details</p>
+        <button id="continue">Continue</button>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://github.com/ankitx007" target="_blank">Ankit Sharma</a
+          >.
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

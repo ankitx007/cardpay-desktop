@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+  transition: all ease 0.3s;
+  transition: opacity ease 0.5s;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  max-height: 100vh;
+}
+
+.images {
+  position: relative;
+}
+
+#background {
+  position: absolute;
+  width: 23.1vw;
+}
+
+#card-back {
+  position: fixed;
+  width: 23.1vw;
+  top: 50%;
+  left: 12%;
+  z-index: 4;
+}
+
+#card-front {
+  position: fixed;
+  width: 23.1vw;
+  background-image: url(images/bg-card-front.png);
+  background-size: contain;
+  height: 30.1vh;
+  z-index: 4;
+  background-repeat: no-repeat;
+  left: 8%;
+  top: 15%;
+  font-size: 2vw;
+  padding: 2vw;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.form {
+  height: 500px;
+}
+
+.card-logo {
+  width: 5vw;
+}
+
+.card-data #card-number {
+  font-size: 85%;
+  color: white;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2px;
+  font-size: 37%;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  width: 40vw;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 60%;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.inputs {
+  display: flex;
+  gap: 5px;
+}
+
+input {
+  padding: 7px;
+  border: 2px solid #e8e8e8;
+  outline: none;
+  border-radius: 10px;
+  width: 55%;
+  font-weight: 700;
+}
+
+input:focus-within {
+  border: 1px solid;
+  border-color: linear-gradient(
+    to-left,
+    hsl(249, 99%, 64%),
+    hsl(278, 94%, 30%)
+  );
+  outline: none;
+}
+
+input::placeholder {
+  color: #b7afaf;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.flex-box-column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 32vw;
+}
+
+button {
+  padding: 10px;
+  border: 2px solid #e8e8e8;
+  outline: none;
+  border-radius: 10px;
+  width: 55%;
+  color: white;
+  background-color: hsl(278, 68%, 11%);
+  cursor: pointer;
+}
+
+.confirmation {
+  display: none;
+  justify-content: center;
+  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  height: 95vh;
+}
+
+#errorMessageDate,
+#errorMessageCVV,
+#errorMessageCardNumber,
+#MonthError {
+  display: none;
+}
